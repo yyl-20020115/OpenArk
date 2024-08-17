@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenArkDrv", "OpenArkDrv\OpenArkDrv.vcxproj", "{EB561C56-54CC-4CB1-94F5-A6E3429F6275}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenArk", "OpenArk\OpenArk.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "knone", "knone\knone.vcxproj", "{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unone", "unone\unone.vcxproj", "{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,18 @@ Global
 		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
+		v140-dynamic-debug|x64 = v140-dynamic-debug|x64
+		v140-dynamic-debug|x86 = v140-dynamic-debug|x86
+		v140-dynamic-debug-dll|x64 = v140-dynamic-debug-dll|x64
+		v140-dynamic-debug-dll|x86 = v140-dynamic-debug-dll|x86
+		v140-dynamic-release|x64 = v140-dynamic-release|x64
+		v140-dynamic-release|x86 = v140-dynamic-release|x86
+		v140-dynamic-release-dll|x64 = v140-dynamic-release-dll|x64
+		v140-dynamic-release-dll|x86 = v140-dynamic-release-dll|x86
+		v140-static-debug|x64 = v140-static-debug|x64
+		v140-static-debug|x86 = v140-static-debug|x86
+		v140-static-release|x64 = v140-static-release|x64
+		v140-static-release|x86 = v140-static-release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.Debug|x64.ActiveCfg = Debug|x64
@@ -23,6 +39,30 @@ Global
 		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.Release|x64.Build.0 = Release|x64
 		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.Release|x86.ActiveCfg = Release|Win32
 		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.Release|x86.Build.0 = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug|x64.ActiveCfg = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug|x64.Build.0 = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug|x86.ActiveCfg = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug|x86.Build.0 = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug-dll|x64.ActiveCfg = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug-dll|x64.Build.0 = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug-dll|x86.ActiveCfg = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-debug-dll|x86.Build.0 = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release|x64.ActiveCfg = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release|x64.Build.0 = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release|x86.ActiveCfg = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release|x86.Build.0 = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release-dll|x64.ActiveCfg = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release-dll|x64.Build.0 = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release-dll|x86.ActiveCfg = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-dynamic-release-dll|x86.Build.0 = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-debug|x64.ActiveCfg = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-debug|x64.Build.0 = Debug|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-debug|x86.ActiveCfg = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-debug|x86.Build.0 = Debug|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-release|x64.ActiveCfg = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-release|x64.Build.0 = Release|x64
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-release|x86.ActiveCfg = Release|Win32
+		{EB561C56-54CC-4CB1-94F5-A6E3429F6275}.v140-static-release|x86.Build.0 = Release|Win32
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x86.ActiveCfg = Debug|Win32
@@ -31,11 +71,100 @@ Global
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.ActiveCfg = Release|Win32
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.Build.0 = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug|x86.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug|x86.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug-dll|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug-dll|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug-dll|x86.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-debug-dll|x86.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release|x64.Build.0 = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release|x86.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release|x86.Build.0 = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release-dll|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release-dll|x64.Build.0 = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release-dll|x86.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-dynamic-release-dll|x86.Build.0 = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-debug|x86.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-debug|x86.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-release|x64.Build.0 = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-release|x86.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.v140-static-release|x86.Build.0 = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Debug|x64.ActiveCfg = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Debug|x64.Build.0 = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Debug|x86.ActiveCfg = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Debug|x86.Build.0 = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Release|x64.ActiveCfg = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Release|x64.Build.0 = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Release|x86.ActiveCfg = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.Release|x86.Build.0 = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug|x64.ActiveCfg = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug|x64.Build.0 = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug|x86.ActiveCfg = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug|x86.Build.0 = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug-dll|x64.ActiveCfg = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug-dll|x64.Build.0 = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug-dll|x86.ActiveCfg = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-debug-dll|x86.Build.0 = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release|x64.ActiveCfg = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release|x64.Build.0 = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release|x86.ActiveCfg = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release|x86.Build.0 = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release-dll|x64.ActiveCfg = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release-dll|x64.Build.0 = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release-dll|x86.ActiveCfg = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-dynamic-release-dll|x86.Build.0 = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-debug|x64.ActiveCfg = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-debug|x64.Build.0 = Debug|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-debug|x86.ActiveCfg = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-debug|x86.Build.0 = Debug|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-release|x64.ActiveCfg = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-release|x64.Build.0 = Release|x64
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-release|x86.ActiveCfg = Release|Win32
+		{76A66E6F-35B1-4A7C-BE20-9233B7D482C4}.v140-static-release|x86.Build.0 = Release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Debug|x64.ActiveCfg = v140-static-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Debug|x64.Build.0 = v140-static-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Debug|x86.ActiveCfg = v140-static-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Debug|x86.Build.0 = v140-static-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Release|x64.ActiveCfg = v140-static-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Release|x64.Build.0 = v140-static-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Release|x86.ActiveCfg = v140-static-release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.Release|x86.Build.0 = v140-static-release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug|x64.ActiveCfg = v140-dynamic-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug|x64.Build.0 = v140-dynamic-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug|x86.ActiveCfg = v140-dynamic-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug|x86.Build.0 = v140-dynamic-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug-dll|x64.ActiveCfg = v140-dynamic-debug-dll|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug-dll|x64.Build.0 = v140-dynamic-debug-dll|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug-dll|x86.ActiveCfg = v140-dynamic-debug-dll|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-debug-dll|x86.Build.0 = v140-dynamic-debug-dll|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release|x64.ActiveCfg = v140-dynamic-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release|x64.Build.0 = v140-dynamic-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release|x86.ActiveCfg = v140-dynamic-release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release|x86.Build.0 = v140-dynamic-release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release-dll|x64.ActiveCfg = v140-dynamic-release-dll|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release-dll|x64.Build.0 = v140-dynamic-release-dll|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release-dll|x86.ActiveCfg = v140-dynamic-release-dll|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-dynamic-release-dll|x86.Build.0 = v140-dynamic-release-dll|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-debug|x64.ActiveCfg = v140-static-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-debug|x64.Build.0 = v140-static-debug|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-debug|x86.ActiveCfg = v140-static-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-debug|x86.Build.0 = v140-static-debug|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-release|x64.ActiveCfg = v140-static-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-release|x64.Build.0 = v140-static-release|x64
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-release|x86.ActiveCfg = v140-static-release|Win32
+		{658AB9A2-3EC1-4FFA-AD37-6EB940645BF9}.v140-static-release|x86.Build.0 = v140-static-release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		Qt5Version = qt-64
+		SolutionGuid = {0A795CA1-053D-4BFE-AFBF-9242E54E2988}
 	EndGlobalSection
 EndGlobal

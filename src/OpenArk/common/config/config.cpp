@@ -203,8 +203,8 @@ void OpenArkConfig::GetMainTabMap(int seq, QVector<int> &idx)
 	if (seq >= maintab_map_.size()) return;
 	int cnt = maintab_map_[seq].mid(0, 1).toInt();
 	if (!cnt) return;
-	
-	QString &back = maintab_map_[seq].mid(1);
+	//FIXED: should not be QString&
+	QString back = maintab_map_[seq].mid(1);
 	for (int i = 0; i < back.size(); i+=2) {
 		idx.push_back(back.mid(i, 2).toInt());
 	}

@@ -629,12 +629,14 @@ Q_INVOKABLE void Cmds::CmdProcessTree(QString cmd, QStringList argv)
 Q_INVOKABLE void Cmds::CmdMemoryEditor(QString cmd, QStringList argv)
 {
 	SIZE_T PageSize;
-	auto OutMemoryInfoStyle1 = [&](wchar_t* name, SIZE_T size) {
+	//FIXED: should be const wchar_t*
+	auto OutMemoryInfoStyle1 = [&](const wchar_t* name, SIZE_T size) {
 		double mb = (double)(size*PageSize) / 1024 / 1024;
 		double gb = round((double)(size*PageSize) / 1024 / 1024 / 1024);
 		CmdOutput(L"%s : %0.2f GB (%0.2f MB)", name, gb, mb);
 	};
-	auto OutMemoryInfoStyle2 = [&](wchar_t* name, SIZE_T size) {
+	//FIXED: should be const wchar_t*
+	auto OutMemoryInfoStyle2 = [&](const wchar_t* name, SIZE_T size) {
 		double mb = (double) size / 1024 / 1024;
 		CmdOutput(L"%s : %0.2f MB", name, mb);
 	};

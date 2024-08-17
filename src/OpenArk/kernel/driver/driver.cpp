@@ -264,8 +264,8 @@ QString KernelDriver::DriversItemData(int column)
 	return GetCurItemViewData(ui_->driverView, column);
 }
 
-
-bool ImportPrivateKey(const std::string &private_key, WCHAR *passwd, WCHAR *category)
+//FIXED: should be const WCHAR*
+bool ImportPrivateKey(const std::string &private_key, const WCHAR *passwd,const WCHAR *category)
 {
 	bool ret = false;
 	HCERTSTORE cert_store = NULL;

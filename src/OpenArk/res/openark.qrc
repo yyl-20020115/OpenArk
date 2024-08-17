@@ -98,7 +98,7 @@
     <file>refresh.ico</file>
     <file>gitub.ico</file>
     <file>console.ico</file>
-    <file>BundlerShell.exe</file>
+    <!--<file>BundlerShell.exe</file>-->
     <file>handle.ico</file>
     <file>module.ico</file>
     <file>memory.ico</file>

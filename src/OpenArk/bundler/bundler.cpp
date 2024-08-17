@@ -61,7 +61,8 @@ void Bundler::dropEvent(QDropEvent *event)
 {
 	if (!event->mimeData()->hasUrls())
 		return;
-	QString& path = event->mimeData()->urls()[0].toLocalFile();
+	//FIXED: should not be QString&
+	QString path = event->mimeData()->urls()[0].toLocalFile();
 	if (!UNONE::FsIsDirW(path.toStdWString()))
 		return;
 	OpenFolderImpl(path);

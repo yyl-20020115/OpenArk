@@ -18,12 +18,13 @@
 #include <string>
 #include <map>
 
-extern char *MessageRawString;
+//FIXED: should be const char*
+extern const char *MessageRawString;
 extern std::map<int, std::wstring> ObjectTypeTable;
 extern std::map<int, std::string> MessageMapTable;
 
 void InitObjectTypeTable();
-int GetObjectTypeIndex(wchar_t* name);
+int GetObjectTypeIndex(const wchar_t* name);
 std::string MbiTypeToString(int type);
 std::string MbiStateToString(int type);
 std::string MbiPageProtectToString(int type);

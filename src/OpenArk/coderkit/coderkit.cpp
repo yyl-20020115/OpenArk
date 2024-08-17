@@ -736,7 +736,9 @@ std::string CoderKit::UrlDecode(const std::string &buf)
 				i += 2;
 			}
 		}
-		auto& decode = [](std::string& s)->std::string {
+		//FIXED: should not be auto&
+		//auto&
+		auto decode = [](const std::string& s)->std::string {
 			std::string out;
 			for (size_t i = 0; i < s.size(); i+=3) {
 				unsigned char ch = 0;

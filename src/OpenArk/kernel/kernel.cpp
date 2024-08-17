@@ -255,7 +255,8 @@ void Kernel::InitKernelEntryView()
 
 	connect(ui.kernelModeBtn, SIGNAL(clicked()), this, SLOT(onClickKernelMode()));
 	connect(ui.kernelInfoView, &QTableView::doubleClicked, [&](QModelIndex idx) {
-		QString &txt = idx.data().toString();
+		//FIXED: should not be QString&
+		QString txt = idx.data().toString();
 		if (txt == tr("ReleaseNumber") || txt == tr("BuildNumber")) {
 			ShellOpenUrl("https://docs.microsoft.com/en-us/windows/release-health/release-information");
 		}

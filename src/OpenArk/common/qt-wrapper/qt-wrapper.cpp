@@ -130,7 +130,8 @@ QIcon LoadIcon(QString file_path)
 	}
 	QFileInfo file_info(file_path);
 	QFileIconProvider provider;
-	QIcon &ico = provider.icon(file_info);
+	//FIXED: should not be QIcon &
+	QIcon ico = provider.icon(file_info);
 	for (auto qs : ico.availableSizes()) {
 		if (!ico.pixmap(qs).isNull()) {
 			icon_cache.d.insert(file_path, ico);

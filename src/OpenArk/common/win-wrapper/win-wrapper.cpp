@@ -548,8 +548,8 @@ bool ReadStdout(const std::wstring& cmdline, std::wstring& output, DWORD& exitco
 	delete[] buf;
 	return result;
 }
-
-DWORD PsGetPidByWindowW(wchar_t *cls, wchar_t *title)
+//FIXED: should be const char*
+DWORD PsGetPidByWindowW(const wchar_t *cls, const wchar_t *title)
 {
 	DWORD pid = INVALID_PID;
 	HWND wnd = FindWindowW(cls, title);

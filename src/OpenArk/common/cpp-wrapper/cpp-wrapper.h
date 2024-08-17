@@ -15,7 +15,8 @@
 ****************************************************************************/
 #pragma once
 #include <functional>
-
+//FIXED:need this include
+#include <string>
 // form: http://mindhacks.cn/2012/08/27/modern-cpp-practices/
 class ScopeGuard
 {

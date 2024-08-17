@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=:PlatformToolSet=v141_xp:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=7.0
+v140-static-release|Win32|C:\working\OpenArk\src\|

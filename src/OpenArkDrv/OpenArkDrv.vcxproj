@@ -23,32 +23,32 @@
     <ProjectGuid>{EB561C56-54CC-4CB1-94F5-A6E3429F6275}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>knonetest</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -76,7 +76,7 @@
     <TargetExt>.sys</TargetExt>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <OutDir>$(SolutionDir)OpenArk\res\driver</OutDir>
-    <IncludePath>$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
+    <IncludePath>..\knone;$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
     <LibraryPath>$(WDKPATH)\lib\wxp\i386;$(WDKPATH)\lib\crt\i386;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <IntDir>intermediate-files\$(Platform)\$(Configuration)\</IntDir>
@@ -87,7 +87,7 @@
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <IntDir>intermediate-files\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)OpenArk\res\driver</OutDir>
-    <IncludePath>$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
+    <IncludePath>..\knone;$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
     <LibraryPath>$(WDKPATH)\lib\win7\amd64;$(WDKPATH)\lib\crt\amd64;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
@@ -96,7 +96,7 @@
     <TargetExt>.sys</TargetExt>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <OutDir>$(SolutionDir)OpenArk\res\driver</OutDir>
-    <IncludePath>$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
+    <IncludePath>..\knone;$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
     <LibraryPath>$(WDKPATH)\lib\wxp\i386;$(WDKPATH)\lib\crt\i386;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <IntDir>intermediate-files\$(Platform)\$(Configuration)\</IntDir>
@@ -107,7 +107,7 @@
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <IntDir>intermediate-files\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)OpenArk\res\driver</OutDir>
-    <IncludePath>$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
+    <IncludePath>..\knone;$(WDKPATH)\INC\api;$(WDKPATH)\INC\crt;$(WDKPATH)\INC\ddk;$(IncludePath)</IncludePath>
     <LibraryPath>$(WDKPATH)\lib\win7\amd64;$(WDKPATH)\lib\crt\amd64;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
@@ -117,7 +117,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>DBG;_ARKDRV_;_X86_;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;DBG;_ARKDRV_;_X86_;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>
@@ -179,13 +179,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_ARKDRV_;_X86_;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_ARKDRV_;_X86_;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
       <CallingConvention>StdCall</CallingConvention>
       <BufferSecurityCheck>
       </BufferSecurityCheck>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4099;4091;4311;4312;4302</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Native</SubSystem>
@@ -217,6 +218,7 @@
       </BufferSecurityCheck>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4099;4091;4311;4312;4302</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Native</SubSystem>
@@ -285,12 +287,17 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\knone\knone.vcxproj">
+      <Project>{76a66e6f-35b1-4a7c-be20-9233b7d482c4}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  <!-- <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\knone-wdk71.1.0.1\build\native\knone-wdk71.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\knone-wdk71.1.0.1\build\native\knone-wdk71.props'))" />
     <Error Condition="!Exists('..\packages\knone-wdk71.1.0.1\build\native\knone-wdk71.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\knone-wdk71.1.0.1\build\native\knone-wdk71.targets'))" />
-  </Target>
+  </Target> -->
 </Project>

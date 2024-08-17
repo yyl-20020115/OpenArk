@@ -26,7 +26,7 @@
 #else
 namespace ArkDrvApi {
 namespace Network {
-char* GetReadableState(int state)
+const char* GetReadableState(int state)
 {
 	switch (state) {
 	case MIB_TCP_STATE_CLOSED:

@@ -123,7 +123,8 @@ void Scanner::dropEvent(QDropEvent *event)
 {
 	if (!event->mimeData()->hasUrls())
 		return;
-	QString& path = event->mimeData()->urls()[0].toLocalFile();
+	//FIXED: should not be QString&
+	QString path = event->mimeData()->urls()[0].toLocalFile();
 	onOpenFile(path);
 }
 
@@ -211,7 +212,8 @@ void Scanner::onRelocChanged(const QModelIndex &current, const QModelIndex &prev
 			for (int i = 0; i < itemcnt; i++) {
 				USHORT offset = items[i] & 0xFFF;
 				DWORD rva = reloc->VirtualAddress + offset;
-				CHAR *type = NULL;
+				//FIXED:should be const CHAR*
+				const CHAR *type = NULL;
 				switch (items[i] >> 12) {
 				case IMAGE_REL_BASED_ABSOLUTE:
 					type = "IMAGE_REL_BASED_ABSOLUTE";
@@ -496,8 +498,8 @@ void Scanner::RefreshSummary(const std::wstring& path)
 		link_major = PE_OPT_HEADER32(pe_image_)->MajorLinkerVersion;
 		link_minor = PE_OPT_HEADER32(pe_image_)->MinorLinkerVersion;
 	}
-
-	struct { int major; int minor; wchar_t* info; } linkers[] = {
+	//FIXED: should be const char*
+	struct { int major; int minor; const wchar_t* info; } linkers[] = {
 		{ 5, -1, L"vc50 (5.0)" },
 		{ 6, -1, L"vc60 (6.0)" },
 		{ 7, -1, L"vc70 (2003)" },
@@ -584,7 +586,8 @@ void Scanner::RefreshHeaders()
 
 	PIMAGE_OPTIONAL_HEADER32 opt_hdr32;
 	PIMAGE_OPTIONAL_HEADER64 opt_hdr64;
-	char* opt_title;
+	//FIXED: should be const char*
+	const char* opt_title;
 	if (pe_x64_) {
 		opt_title = "IMAGE_FILE_HEADER64";
 		opt_hdr64 = PE_OPT_HEADER64(pe_image_);
@@ -666,8 +669,8 @@ void Scanner::RefreshHeaders()
 
 	QStandardItem* subdir_item;
 	PIMAGE_DATA_DIRECTORY dir;
-
-	struct {char* name;	int value;} dir_arr[] = {
+	//FIXED: should be const char*
+	struct {const char* name;	int value;} dir_arr[] = {
 		"IMAGE_DIRECTORY_ENTRY_EXPORT", IMAGE_DIRECTORY_ENTRY_EXPORT,
 		"IMAGE_DIRECTORY_ENTRY_IMPORT", IMAGE_DIRECTORY_ENTRY_IMPORT,
 		"IMAGE_DIRECTORY_ENTRY_RESOURCE", IMAGE_DIRECTORY_ENTRY_RESOURCE,
@@ -841,7 +844,8 @@ void Scanner::RefreshDebug()
 	auto imgid = UNONE::StrFormatA("%X%x", ts, imgsize);
 
 	DWORD age = 0;
-	CHAR *sig = "";
+	//FIXED: should be const char*
+	const CHAR *sig = "";
 	std::string pdb, guidsig, symid;
 	if (cv_hdr->Signature == NB10_SIG) {
 		sig = "NB10";

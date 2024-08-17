@@ -19,8 +19,10 @@
 //for qt static link
 #include <QtWidgets/QApplication>
 #include <QtPlugin>
-Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
-Q_IMPORT_PLUGIN(QICOPlugin)
+
+//TODO:FIXME Uncomment the following lines to enable plugins. BUT WHY THEY'RE NEEDED?
+//Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+//Q_IMPORT_PLUGIN(QICOPlugin)
 
 int OpenArkInit(int argc, char *argv[])
 {
